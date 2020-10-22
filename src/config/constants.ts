@@ -2,8 +2,7 @@ export const SLUG_REGEX: RegExp = /^([\w\-]{5})$/;
 export const KEY_REGEX: RegExp = /^([\w\-]{20})$/;
 
 // https://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url
-export const FULL_URL_REGEX: RegExp = /^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/;
-export const URL_REGEX: RegExp = /^[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
+export const FULL_URL_REGEX: RegExp = /^(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+$/;
 export const IPV4_REGEX: RegExp = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
 
 // https://stackoverflow.com/questions/53497/regular-expression-that-matches-valid-ipv6-addresses
