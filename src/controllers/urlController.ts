@@ -1,7 +1,7 @@
 import dotenv from "dotenv"; dotenv.config();
 import { Request, Response, NextFunction } from "express";
 import HttpException from "../exceptions/HttpException";
-import { SLUG_REGEX, KEY_REGEX, URL_REGEX, IPV6_REGEX, IPV4_REGEX } from "../config/constants";
+import { SLUG_REGEX, KEY_REGEX, FULL_URL_REGEX, IPV6_REGEX, IPV4_REGEX } from "../config/constants";
 import CoolURL from "../models/CoolURL";
 import CoolRequest from "../models/CoolRequest";
 import { nanoid } from "nanoid";
@@ -79,7 +79,7 @@ export const indexPost = async (req: Request, res: Response, next: NextFunction)
     await rateLimit(getHash(req));
     const { url } = req.body;
 
-    if (!URL_REGEX.test(url)) {
+    if (!FULL_URL_REGEX.test(url)) {
       throw new HttpException(400, "Invalid URL");
     }
 

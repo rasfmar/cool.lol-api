@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { KEY_REGEX, SLUG_REGEX, URL_REGEX } from "../config/constants";
+import { KEY_REGEX, SLUG_REGEX, FULL_URL_REGEX } from "../config/constants";
 
 const urlSchema = new Schema({
   slug: {
@@ -13,7 +13,7 @@ const urlSchema = new Schema({
   url: {
     type: String,
     required: [true, "URL required"],
-    match: URL_REGEX,
+    match: FULL_URL_REGEX,
   },
   key: {
     type: String,
