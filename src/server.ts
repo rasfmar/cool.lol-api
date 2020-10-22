@@ -9,6 +9,7 @@ import { DEFAULT_MONGODB_URI, DEFAULT_PORT, DEFAULT_CORS_ORIGIN } from "./config
 import mongoose from "mongoose";
 
 dotenv.config();
+
 mongoose.connect(process.env.MONGODB_URI || DEFAULT_MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
