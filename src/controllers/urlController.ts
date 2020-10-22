@@ -66,7 +66,7 @@ export const indexGet = async (req: Request, res: Response, next: NextFunction) 
     } else {
       res.status(200);
       res.json({
-        message: "OK",
+        message: "OK.",
       });
     }
   } catch (error) {
